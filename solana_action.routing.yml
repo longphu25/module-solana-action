@@ -1,0 +1,18 @@
+# solana_action.user_donate:
+#   path: '/solana-action/user-donate'
+#   defaults:
+#     _title: 'User Donate'
+#     _controller: '\Drupal\solana_action\Controller\UserDonateController'
+#   requirements:
+#     _permission: 'access content'
+
+solana_action.user_donate:
+  path: '/user/{user_id}/donate'
+  # path: '/user/{uuid}/donate'
+  defaults:
+    _title: 'User Donate'
+    _controller: '\Drupal\solana_action\Controller\UserDonateController::donate'
+  requirements:
+    _permission: 'access content'
+    user_id: '\d+'
+    # uuid: '[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}'

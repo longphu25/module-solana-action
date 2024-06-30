@@ -1,0 +1,7 @@
+block.settings.solana_action_user_donate:
+  type: block_settings
+  label: 'User Donate block'
+  mapping:
+    example:
+      type: string
+      label: Example
